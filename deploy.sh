@@ -11,8 +11,10 @@ cd ../
 rm -r compressed
 mkdir compressed
 mv extracted/*.tar.gz compressed
+git stash
 
 git checkout gh-pages
+git stash pop
 git add compressed
 git add .
 git commit -m "Updated git binaries"
